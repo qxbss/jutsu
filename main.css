@@ -1,0 +1,1175 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Monument';
+	color: var(--primary-color);
+	background: var(--background);
+	overflow-x: hidden;
+}
+::selection {background: var(--primary-color); color: var(--more-color-home);}
+::-moz-selection {background:var(--primary-color); #15111E; color: var(--more-color-home);}
+::-webkit-selection {background:var(--primary-color); #15111E; color: var(--more-color-home);}
+
+::-webkit-scrollbar{
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	border-radius: 15px;
+	border: 3px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #EDEDED;
+}
+::-moz-placeholder {
+	color: #000;
+}
+:root{
+	--sidebar-white: rgba(31, 32, 34, 0.5);
+	--primary-color: #fff;
+	--secondary-color: #1F2022;
+	--background: #161719;
+	--primary-hover: #2B2D31;
+	--activ-color: #fff;
+	--input-back-color: #1F2022;
+	--input-color: #fff;
+	--more-color: #fff;
+	--more-color-home: #000;
+	--ep-btn: #100F0F;
+	--ep-btn-hover: #000;
+	--activ-hover: #E8E5E9;
+	--star-hover: #161719;
+	--icon-hover: #42454A;
+	--send-icon: #B0B0B0;
+	--friend-chat: #343538;
+}
+
+.dark-theme {
+	--background: #f4f4f4;
+	--more-color: #000;
+	--more-color-home: #fff;
+	--activ-color: #000;
+	--input-color: #000;
+	--input-back-color: #fff;
+	--primary-color: #000;
+	--secondary-color: #fff;
+	--sidebar-white: rgba(255, 255, 255, 0.5);
+	--primary-hover: #E8E5E9;
+	--ep-btn: #100F0F;
+	--ep-btn-hover: #000;
+	--activ-hover: #2B2D31;
+	--star-hover: #f4f4f4;
+	--icon-hover: #D7D2D9;
+	--friend-chat: #E8E5E9;
+}
+#icon {
+
+}
+
+input {
+	background: var(--input-back-color);
+}
+
+a,ul,li ,p{
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: var(--primary-color);
+}
+.container {
+	max-width: 1366px;
+	margin-left: auto;
+}
+
+
+@font-face {
+  font-family: 'Monument';
+  src: url('fonts/MonumentExtended-Regular.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Monumentultra';
+  src: url('fonts/Monument Extended Ultralight.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.logo {
+	font-size: 16px;
+	text-align: center;
+	color: var(--primary-color);
+	margin: 20px 0 0 0;
+}
+
+
+.activ {
+	background: var(--primary-color);
+	width: 68px;
+	height: 60px;
+	border-radius: 14px;
+	display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.activ:hover {
+	background: var(--activ-hover);
+	transition: 0.3s ease;
+}
+.header {
+	padding: 10px 10px;
+	width: 100%;
+}
+.sidebar {
+	position: fixed;
+	height: 96%;
+	width: 95px;
+	background: var(--sidebar-white);
+	border-radius: 18px;
+	display: grid;
+  justify-items: center;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 15px;
+  backdrop-filter: blur(25px);
+  z-index: 3;
+}
+.sidebar.active {
+	width: 130px;
+}
+
+
+.sec {
+	font-family: 'Monumentultra';
+	font-size: 12px;
+	color: var(--more-color);
+}
+.nav-link:not(:last-child) {
+  margin: 0 60px 0 0;
+} 
+.links_name {
+	font-size: 8px;
+}
+
+.line {
+	width: 75px;
+	height: 1px;
+	background: #676669;
+}
+
+.nav_list {
+	display: grid;
+	justify-items: center;
+}
+.sidebar li {
+	padding: 15px 0;
+}
+
+.sidebar_ava {
+	margin: 5px 0;
+}
+
+.tooltip {
+	position: absolute;
+	padding: 10px 20px;
+	left: 102px;
+	border-radius: 6px;
+	text-align: center;
+	background: var(--input-back-color);
+	color: var(--primary-color);
+	transition: 0;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 5;
+}
+
+.sidebar ul,li:hover .tooltip{
+	transition: all 0.4s ease;
+	opacity: 1;
+}
+
+
+.sidebar:active {
+
+}
+
+.sidebar.line.active {
+	width: 140px;
+}
+
+.search {
+	    width: 718px;
+    padding: 20px 25px;
+    font-size: 12px;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border: none;
+    font-family: 'Monumentultra';
+    border-radius: 12px;
+    outline: none;
+    resize: none;
+
+}
+/*.icon_search{
+      width: 20px;
+      height: 20px;
+      background: url('icons/Search.svg') no-repeat;
+}*/
+
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-link {
+	font-size: 14px;
+	font-family: 'Monumentultra';
+	color: var(--primary-color);
+}
+.nav-link:hover {
+	color: #676669;
+}
+
+.huyna {
+	display: flex;
+}
+
+.search-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dark-mode-icon {
+	cursor: pointer;
+}
+.huyna.continue {
+
+}
+.title {
+	font-family: 'Monument';
+	font-size: 18px;
+	text-transform: uppercase;
+	margin: 35px 0 0 0;
+	color: var(--primary-color);
+}
+
+.title2 {
+	font-family: 'Monument';
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.con-watch {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 332px;
+	height: 52px;
+	background: var(--secondary-color);
+	border-radius: 35px 12px 12px 35px;
+	border: 1px solid var(--secondary-color);
+	cursor: pointer;
+	margin: 40px 0 0 0;
+	transition: all 0.3s linear;
+}
+.con-watch:hover {
+	border: 1px solid var(--primary-color);
+	transition: .3s linear;
+	background: var(--primary-hover);
+}
+
+.anime-name {
+	font-size: 14px;
+	    padding: 0px 0 7px 0;
+	    text-transform: uppercase;
+}
+.anime-ep {
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	text-transform: uppercase;
+}
+
+.anime_pic {
+	position: relative;
+	/*width: 73px;
+	height: 73px;*/
+	border-radius: 100%;
+	margin: 0 -1.5px;
+	/*background: url(https://wallpaperaccess.com/full/1991387.jpg)no-repeat center  / 130px*/;
+}
+
+.icon-more {
+	width: 24px;
+	height: 24px;
+	margin: 0 20px;
+	position: relative;
+}
+
+.continue {
+    margin: 0 50px 0 0;
+}
+
+.animes {
+	display: flex;
+	align-items: flex-end;
+	/*position: absolute;*/
+	/*top: 65px;
+	left: 140px;*/
+}
+
+.con-ep {
+	display: grid;
+	align-content: center;
+	width: 332px;
+	height: 185px;
+	border-radius: 18px;
+	background: var(--secondary-color);
+	border-radius: 18px;
+	cursor: pointer;
+	border: 1px solid var(--secondary-color);
+	transition: all .3s linear;
+}
+.con-ep:hover {
+	border: 1px solid var(--primary-color);
+	transition: .3s linear;
+	background: var(--primary-hover);
+}
+.profile-pic {
+	border-radius: 100%;
+	margin: 0 -1.5px;
+}
+
+.ep-pic {
+	margin: 13px 0;
+	border-radius: 8px;
+}
+
+.episode {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.ep {
+	   /* position: absolute;*/
+    /*top: 320px;
+    left: 140px;*/
+	display: flex;
+	align-items: flex-end;
+}
+
+.episodes {
+	 margin: 0 50px 0 0;
+}
+
+.blur {
+	position: fixed;
+	top: 71%;
+	left: 48px;
+	z-index: 2;
+	background: #4131FF;
+	width: 62px;
+	height: 187px;
+	border-radius: 18px;
+}
+
+.friend-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 270px;
+	height: 52px;
+	background: var(--secondary-color);
+	border-radius: 35px 12px 12px 35px;
+	border: 0px solid var(--primary-color);
+	margin: 40px 0 0 0;
+	border: 1px solid var(--secondary-color);
+	transition: all .3s linear;
+}
+
+.icon-mess {
+	cursor: pointer;
+	margin: 0 15px;
+}
+
+.online {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #4EEC97;
+	margin: 10px 0 0 60px;
+    position: absolute;
+    z-index: 0;
+}
+
+.fr {
+	display: flex;
+	align-items: flex-end;
+}
+
+.friends {
+	margin: 0 30px 0 0;
+}
+
+.an-fr {
+	display: flex;
+	justify-content: space-between;
+}
+
+.friend-block:hover {
+		border: 1px solid var(--primary-color);
+	transition: .3s linear;
+	background: var(--primary-hover);
+}
+
+.message {
+	width: 454px;
+	border-radius: 18px;
+	background: var(--secondary-color);
+	padding: 20px;
+	margin: 25px 0 0 0;
+	transition: all .4s ease;
+}
+
+.ava-name {
+	font-size: 12px;
+	font-family: 'Monumentultra';
+	margin-right: auto;
+	padding: 0 0 0 15px;
+}
+
+.gray {
+	color: #c4c4c4;
+}
+
+.time {
+	font-size: 10px;
+	font-family: 'Monumentultra';
+	color: #c4c4c4;
+	/*padding: 0 35px 0 0;*/
+}
+
+.chat-titles {
+	display: flex;
+}
+
+.ava-text {
+	display: flex;
+	align-items: center;
+}
+
+.chat-mess {
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	line-height: 16px;
+	margin: 15px 0;
+}
+
+.chat-line {
+	width: 454px;
+	height: 1px;
+	margin: 15px 0;
+	background: #c4c4c4;
+}
+
+.send {
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	border: none;
+	outline: none;
+	width: 470px;
+	padding: 30px 15px;
+	border-radius: 18px 18px 0 0;
+	margin: 15px 0 2px 0;
+}
+
+.send-btn {
+	font-size: 14px;
+	font-family: 'Monument';
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: var(--secondary-color);
+	width: 500px;
+	padding: 15px 0;
+	border-radius: 0 0 18px 18px;
+	color: var(--input-color);
+
+}
+.send-btn:hover {
+	background: var(--primary-hover);
+	transition: all .4s linear;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+}
+.reactions {
+	width: 77px;
+	height: 499px;
+	background: var(--secondary-color);
+	border-radius: 18px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 0 10px;
+	transition: all .4s ease;
+}
+
+.pic-react {
+	flex-grow: 1;
+	width: 30px;
+	height: 30px;
+	transition: all 300ms ease-in-out;
+	margin: 35px 0 0 0;
+}
+
+.pic-react:hover {
+	width: 50px;
+	height: 50px;
+	flex-grow: 2;
+}
+.chat {
+	display: flex; 
+	align-items: flex-end;
+}
+
+.ep-chat {
+	display: flex;
+	align-items: flex-start;
+	margin: 30px 0 0 0;
+}
+
+.ava {
+	border-radius: 100%;
+}
+
+
+.busy {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #F24F4F;
+	margin: 10px 0 0 60px;
+    position: absolute;
+    z-index: 0;
+}
+
+.offline {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #676669;
+	margin: 10px 0 0 60px;
+    position: absolute;
+    z-index: 0;
+}
+
+.goes {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #F5DA7A;
+	margin: 10px 0 0 60px;
+    position: absolute;
+    z-index: 0;
+}
+.anime-name {
+	font-size: 14px;
+	    padding: 0px 0 7px 0;
+	    text-transform: uppercase;
+}
+/*.ep-btn-more {
+	font-size: 14px;
+	width: 300px;
+	padding: 20px 0;
+	border: 1px solid var(--primary-color);
+	text-align: center;
+	border-radius: 14px;
+	cursor: pointer;
+	position: absolute;
+	top: 117%;
+	left: 360px;
+	margin: 0 0 50px 0;
+}
+.ep-btn-more:hover {
+	background: var(--primary-hover);
+	transition: all 0.4s ease;
+}*/
+
+.con-block {
+	width: 100%;
+	height: 100%;
+	background: var(--secondary-color);
+	border-radius: 12px;
+}
+
+.look-name {
+	font-size: 8px;
+	color: #130F26;
+	font-family: 'Monumentultra';
+	/*margin: 0 0 3px 8px;*/
+	color: var(--primary-color);
+}
+
+.looked, .delete {
+	display: flex;
+	align-items: center;
+}
+
+.con-block{
+	display: flex;
+	position: absolute;
+	width: 332px;
+	height: 52px;
+ top: 173px;
+ 	left: 180;
+	justify-content: center;	
+	animation: opac .5s linear;
+}
+
+.gg {
+	display: none;
+}
+.gg.show-block {
+	opacity: 1;
+}
+
+.pizdec {}
+
+
+.show-block {
+	display: block;
+	transition: opacity 1s ease;
+}
+
+.done-icon, .delete-icon {
+	margin: 0 6px;
+}
+
+p,span {
+	padding: 0;
+	margin: 0;
+}
+
+@keyframes opac {
+	0%{ opacity: 0; }
+	100%{opacity: 1;}
+}
+
+.marquee {
+    width: 130px;
+  margin: 0 auto;
+   white-space: nowrap;
+ overflow: hidden;
+ box-sizing: border-box;
+}
+
+.marquee span:hover {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 3s linear infinite;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+
+.player-pic {
+	border-radius: 18px;
+	background: url('icons/video-player.jpg');
+	width: 718px;
+	height: 374px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-button {
+	background: url('icons/play.svg');
+	width: 85px;
+	height: 85px;
+	cursor: pointer;
+}
+# {
+
+}
+.button-pn {
+	width: 220px;
+	font-size: 16px;
+	background: var(--secondary-color);
+	padding: 20px 0;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 12px;
+	transition: all .4s ease;
+}
+.button-pn:hover {
+	background: var(--primary-hover);
+	transition: all .4s linear;
+}
+
+.buttons {
+	margin: 30px 0;
+	display: flex;
+}
+
+.button-episodes {
+	width: 220px;
+	font-size: 16px;
+	background: var(--ep-btn);
+	padding: 20px 0;
+	text-transform: uppercase;
+	margin: 0 30px;
+	text-align: center;
+	border-radius: 12px;
+	color: #fff;
+	transition: all .4s ease;
+}
+
+.button-episodes:hover {
+	background: var(--ep-btn-hover);
+	transition: all .4s ease;
+}
+
+.about-pic {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-size: 10%;
+}
+
+.about-name {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.about-ep {
+	font-size: 12px;
+	font-family: 'Monumentultra';
+	padding: 8px 0 0 0;
+	line-height: 24px;
+}
+
+.about-anime {
+	display: flex;
+	align-items: center;
+	width: 550px;
+}
+.favourite-i, .later-i {
+	width: 45px;
+	height: 45px;
+	border: 1px solid var(--primary-color);
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 0 20px;
+	cursor: pointer;
+}
+.favourite-i:hover, .later-i:hover{
+	background: var(--icon-hover);
+	transition: all .4s ease;
+}
+
+.icons-anime {
+	display: flex;
+	margin-left: auto;
+}
+
+.name-ep {
+	margin: 0 0 0 20px;
+}
+
+.info-anime {
+	font-size: 12px;
+	font-family: 'Monumentultra';
+	line-height: 28px;
+	margin: 25px 0;
+}
+
+.animeshka {
+	margin: 0 0 0 50px;
+}
+
+.star {
+	margin: 0 10px 0 0;
+}
+
+.star-fill {
+	fill: var(--more-color);
+	transition: all .3s ease;
+	cursor: pointer;
+}
+.star-fill:hover {
+	stroke: var(--more-color);
+	fill: var(--star-hover);
+	stroke-width: 1.5px;
+}
+.rating {
+	display: flex;
+	align-items: center;
+}
+.rate {
+	font-size: 20px;
+	margin: 0 0 0 10px;
+	transition: all 0.2s ease;
+}
+
+#rate-1:checked ~ .rate:before {
+	content: "1/5";
+}
+
+#rate-2:checked ~ .rate:before {
+	content: "2/5";
+}
+#rate-3:checked ~ .rate:before {
+	content: "3/5";
+}
+#rate-4:checked ~ .rate:before {
+	content: "4/5";
+}
+#rate-5:checked ~ .rate:before {
+	content: "5/5";
+}
+.age-rating {
+	font-size: 20px;
+	color: #6C6A72;
+	margin-left: auto;
+}
+
+.player-with-info {
+	display: flex;
+	margin: 45px 0 0 0;
+	width: 718px;
+}
+
+.later-watching {
+	width: 718px;
+	background: var(--secondary-color);
+	border-radius: 18px;
+	transition: all .4s ease;
+}
+
+.later-w {
+	width: 643px;
+	font-size: 12px;
+	padding: 20px 38px;
+	font-family: 'Monumentultra';
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.bold {
+	font-family: 'Monument';
+}
+
+.animeshka.chat {
+}
+
+.all-info {
+	margin: 0 0 75px 0;
+	width: 550px;
+}
+
+.random-name {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.random-intro {
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	text-transform: uppercase;
+	width: 290px;
+	padding: 15px 0;
+	line-height: 16px;
+}
+
+.random-pic {
+	background: url('icons/sanin.jpg');
+	width: 280px;
+	height: 130px;
+	border-radius: 12px;
+	margin: 20px 0 20px 30px;
+}
+
+.random-technuqe {
+	background: var(--secondary-color);
+	width: 718px;
+	display: flex;
+	border-radius: 18px;
+	margin: 20px 0 0 0;
+	align-items: center;
+}
+
+.random-texts {
+	margin: 0 20px;
+}
+
+.plyr__poster {
+	    border-radius: 18px;
+}
+
+video {
+	    border-radius: 18px;
+}
+
+.plyr--video {
+	    border-radius: 18px;
+}
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container2 .star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 30px;
+  color: var(--primary-color);
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.star-widget:hover  label{
+	color: var(--primary-hover);
+
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: var(--primary-color);
+}
+
+input:checked ~ label {
+  color: var(--primary-color);
+}
+
+input#rate-5:checked ~ label {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.chat-title {
+	font-size: 18px;
+}
+.date-chat {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Monumentultra';
+	margin: 0 160px;
+}
+
+.chat-info {
+	display: flex;
+	align-items: center;
+	margin: 0 0 40px 0;
+}
+
+.popup_bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	z-index: 10;
+}
+
+.popup_bg.activi {
+	opacity: 1;
+	pointer-events: all;
+	transition: all 0.5s ease;
+}
+.popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	z-index: 15;
+	    display: grid;
+    justify-content: center;
+    background: var(--secondary-color);
+	margin: 0 auto;
+	    width: 550px;
+    padding: 20px;
+    transition: all 0.5s ease;
+    border-radius: 18px;
+}
+
+.popup.activi {
+	transform: translate(-50%,-50%) scale(1);
+	transition: all 0.5s;
+}
+.user-name {
+	font-size: 10px;
+	padding: 0 10px 0 0;
+}
+
+.message-time {
+	font-size: 10px;
+	font-family: 'Monumentultra';
+	color: #676669;
+}
+.user1-message {
+	display: flex;
+	align-items: flex-start;
+}
+
+.first-message {
+	background: var(--friend-chat);
+border-radius: 0px 8px 8px 8px;
+	padding: 10px 12px;
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	margin: 8px 0 0 0;
+}
+
+.scnd-message {
+	background: #43A0FF;
+border-radius: 8px 0px 8px 8px;
+	padding: 10px 12px;
+	font-size: 8px;
+	font-family: 'Monumentultra';
+	margin: 8px 0 0 0;
+	color: #fff;
+}
+
+.user-name-time {
+	display: flex;
+	align-items: center;
+}
+
+.message1 {
+	margin: 0 0 30px 10px;
+}
+.message2 {
+	display: grid;
+	justify-items: end;
+	margin: 0 10px 0 0;
+}
+
+.mess-pic {
+	border-radius: 8px;
+}
+.message-pics {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 0 0;
+}
+
+.messages-react {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	border: 0.9px solid var(--friend-chat);
+	border-radius: 100px;
+	justify-content: center;
+}
+
+.rrr {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.user-color {
+	color: #43A0FF;
+	font-family: 'Monument';
+}
+.typing {
+	font-size: 10px;
+	color: var(--primary-color);
+	font-family: 'Monumentultra';
+}
+
+.user-typing {
+	display: flex;
+	align-items: center;
+	padding: 30px 0 20px 0;
+}
+
+.icon-typing {
+	margin: 0 6px 0 0;
+}
+
+.placehold {
+	font-size: 10px;
+	color: #B0B0B0;
+	font-family: 'Monumentultra';
+	padding: 0 10px;
+}
+
+.send-message {
+	display: flex;
+	align-items: center;
+	background: var(--primary-hover);
+	width: 514px;
+	border-radius: 8px;
+	justify-content: space-between;
+	padding: 10px 15px;
+}
+
+.send-icons {
+	display: flex;
+	align-items: center;
+}
+.add-img {
+	margin: 0 20px 0 10px;
+}
+
+.ava-your {
+	display: flex;
+	align-items: center;
+}
+
+
+.send-messa, .add-img, .add-user-icon, .chat-setting {
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+}
+
+.chat-close {
+	cursor: pointer;
+}
+
+.emojis {
+	font-size: 12px;
+}
+
+.your-mess {
+	border: none;
+    outline: none;
+    background: none;
+    font-size: 10px;
+    font-family: 'Monumentultra';
+    color: var(--primary-color);
+    width: 350px;
+    padding: 0 12px;
+}
